@@ -57,7 +57,7 @@ export class Horoscopo {
         return { signo: "Año no válido", imagen: "" };
     }
   }
-
+    //para el commit del horoscopo
   public calcularEdad(): number {
     let fechaNacimiento = new Date(this.anoO, this.mesO - 1, this.diaO);
     let hoy = new Date();
