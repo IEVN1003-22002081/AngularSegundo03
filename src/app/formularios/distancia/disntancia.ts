@@ -9,4 +9,5 @@ export class Distancia {
     let dy= this.y2- this.y1;
     this.resultado = Math.sqrt(dx*dx+dy*dy); 
   }
+/// para elcommit
 }
