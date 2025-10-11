@@ -1,0 +1,26 @@
+<div>
+<h1>Multiplicaciones</h1>
+  <form [formGroup]="formulario">
+    <div>
+      <label for="">Primer número:</label>
+      <input formControlName="numero1" type="number">
+    </div>
+    <br>
+    <div>
+      <label for="">Segundo número:</label>
+      <input formControlName="numero2" type="number">
+    </div>
+    <br>
+    <button (click)="multNumeros()" type="submit" class="btn btn-primary"> Multiplicar </button>
+    <h1>Resultado: {{resultado}}</h1>
+  </form>
+</div> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

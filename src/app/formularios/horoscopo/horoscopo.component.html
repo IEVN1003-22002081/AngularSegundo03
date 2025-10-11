@@ -1,0 +1,57 @@
+<div class="container text-center">
+  <div class="row">
+    <h3>Horóscopo Chino</h3>
+
+    <!-- Columna del formulario -->
+    <div class="col">
+      <form [formGroup]="formulario">
+        <div><label>Nombre:</label>
+          <input formControlName="nombre" type="text">
+        </div><br>
+
+        <div><label>Apellido Paterno:</label>
+          <input formControlName="apellidoP" type="text">
+        </div><br>
+
+        <div><label>Apellido Materno:</label>
+          <input formControlName="apellidoM" type="text">
+        </div><br>
+
+        <div><label>Día:</label>
+          <input formControlName="dia" type="number">
+        </div><br>
+
+        <div><label>Mes:</label>
+          <input formControlName="mes" type="number">
+        </div><br>
+
+        <div><label>Año:</label>
+          <input formControlName="ano" type="number">
+        </div><br>
+
+        <div><label>Sexo:</label>
+          <input type="radio" formControlName="sex" [value]="true"> Masculino
+          <input type="radio" formControlName="sex" [value]="false"> Femenino
+        </div><br>
+
+        <button class="btn btn-primary" type="button" (click)="calcular()">Calcular</button>
+      </form>
+    </div>
+
+    <!-- Columna de resultado -->
+    <div class="col">
+      <div *ngIf="resultado" class="resultado mt-3">
+        <h4>Hola, {{ resultado.nombre }}</h4>
+        <p>Edad: {{ resultado.edad }} años</p>
+        <p>Tu signo en el horóscopo chino es: <strong>{{ resultado.signo }}</strong></p>
+        <img *ngIf="resultado.imagen"
+             [src]="resultado.imagen"
+             alt="{{ resultado.signo }}"
+             width="200"
+             height="200"
+             style="border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.3); margin-top: 10px;">
+      </div>
+    </div>
+  </div>
+</div>
+
