@@ -5,10 +5,12 @@ import { initFlowbite} from 'flowbite';
 import { HoroscopoComponent } from './formularios/horoscopo/horoscopo.component';
 import { AxBComponent } from './formularios/ax-b/ax-b.component'; */
 import { NavbarComponent } from './navbar/navbar.component';
+import { TemhComponent } from './tem/temh/temh.component';
+import { TempComponent } from './tem/temp/temp.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,/* DistanciaComponent, HoroscopoComponent,AxBComponent, */ NavbarComponent],
+  imports: [RouterOutlet,/* DistanciaComponent, HoroscopoComponent,AxBComponent, */ NavbarComponent,TemhComponent,TempComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
